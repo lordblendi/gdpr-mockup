@@ -1,0 +1,25 @@
+<div class="max-w-full bg-black flex flex-row items-stretch px-2">
+  <!-- KPI FOR LOOP-->
+  {% for kpi in site.data.kpis.data %}
+  <div class="flex flex-col items-stretch flex-grow mx-2">
+    <!-- TOP ROW-->
+    <div class="flex flex-row flex-grow items-stretch mt-2 mx-2 text-grey-dark uppercase  text-sm">
+      <div class="flex-grow text-left">
+        {{kpi.title}}
+      </div>
+      <div class="flex-grow text-right">
+        <span class="text-red">{{kpi.risk}}</span>{{kpi.total}}
+      </div>
+    </div>
+    <!-- BOTTOM ROW-->
+    <!-- I build the string here while I'm taking the red % from the data file-->
+  {% assign backgroundStyle = "background: linear-gradient(to right, var(--color-red) "
+      | append: {{kpi.red}}
+      | append: ", var(--color-blue)); " %}
+    <div class="flex-grow text-white">
+      <div class="h-2 rounded-full m-2 mt-1" style="{{backgroundStyle}}">
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "title":" Asset",
+      "risk":"3",
+      "total": "/9",
+      "red":"30%"
+    },
+    {
+      "title":" Attribures",
+      "risk":"32",
+      "total": "/48",
+      "red":"60%"
+    },
+    {
+      "title":" Records",
+      "risk":"16K",
+      "total": "/39K",
+      "red":"40%"
+    },
+    {
+      "title":" Risk Level",
+      "risk":"72%",
+      "total": "",
+      "red":"72%"
+    }
+  ]
+}
