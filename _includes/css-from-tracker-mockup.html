@@ -1,0 +1,14 @@
+
+{% assign cssLocation = "https://tenforce.github.io/tracker-mockup" %}
+
+{% if site.url contains "localhost" %}
+  {% assign cssLocation = "http://localhost:4000" %}
+{% endif %}
+
+<link rel="stylesheet" href="{{ cssLocation }}/sass/tailwind-extend.css">
+<link rel="stylesheet" href="{{ cssLocation }}/sass/tailwind-custom.css">
+<link rel="stylesheet" href="{{ cssLocation }}/sass/components/itembox.css">
+<link rel="stylesheet" href="{{ cssLocation }}/sass/components/field.css">
+<link rel="stylesheet" href="{{ cssLocation }}/sass/components/selector.css">
+<link rel="stylesheet" href="{{ cssLocation }}/sass/components/buttons.css">
+<link rel="stylesheet" href="{{ cssLocation }}/sass/components/tabs.css">
