@@ -1,11 +1,11 @@
-<div class="flex flex-col sm:flex-row items-center px-2 bg-black">
+<div class="flex flex-col sm:flex-row items-center px-2 bg-black-light">
   <!-- KPI FOR LOOP-->
   {% for kpi in site.data.kpis.data %}
   <div class="flex flex-1 flex-col sm:flex-grow w-full m-2">
     <!-- TOP ROW-->
-    <div class="flex lex-row items-center mt-2 mx-2">
+    <div class="flex lex-row items-center mt-2 mx-2 px-1">
       <div class="flex-1 h8 text-grey">
-        <span class="font-normal">{{kpi.icon}}</span> {{kpi.title}}
+        <span class="font-normal">{{kpi.icon}}</span> <span class="">{{kpi.title}}</span>
       </div>
       <div class="text-right h8 text-grey">
         <span class="text-red">{{kpi.risk}}</span><span>{{kpi.total}}</span>
