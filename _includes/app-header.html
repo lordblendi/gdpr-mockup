@@ -1,31 +1,33 @@
-<header class="m-4 flex items-center justify-between flex-wrap ">
-  <div class="flex items-center flex-no-shrink">
-    <a href="#" class="text-white text-left text-3xl no-underline">ܓ</a>
+<header class="flex flex-col sm:flex-row items-center p-2">
+
+  <div class="flex-1 p-2">
+    <a href="#" class="text-white text-3xl no-underline">ܓ</a>
   </div>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-    <div class="lg:flex-grow"></div>
-    <div class="header__actions">
-      <div class="block-action readonly">
-        <div class="inline align-baseline uppercase text-grey-dark font-normal cursor-default">updated weeks ago</div>
-        <button class="btn btn--go btn--small-caps"> Update Assets</button>
-      </div>
-      <div class="block-action readonly">
-        <div class="selector selector--singleselect selector--expanded JS_selector">
-          <div class="selector__item JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--field"> Overview</div>
-            </div>
+
+  <div class="flex flex-row items-center p-2">
+    <div class="mx-2 text-sm text-grey uppercase">updated weeks ago</div>
+
+    <button class="mx-2 btn btn--go btn--small-caps"> Update Assets</button>
+
+    <div class="mx-2">
+      <div class="selector selector--singleselect selector--expanded JS_selector">
+        <div class="selector__item JS_selectorItem">
+          <div class="selector__block">
+            <div class="selector__blockPart selector__blockPart--field"> Overview</div>
           </div>
-          <div class="selector__itemSeperator"></div>
-          <div class="selector__item selector__item--selected JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--field"> Risk Analisys</div>
-            </div>
+        </div>
+        <div class="selector__itemSeperator"></div>
+        <div class="selector__item selector__item--selected JS_selectorItem">
+          <div class="selector__block">
+            <div class="selector__blockPart selector__blockPart--field"> Risk Analisys</div>
           </div>
         </div>
       </div>
-      <div class="block-action uppercase font-semibold">Jetro De Jaeger</div>
-      <div class="block-action font-medium"><sup>23</sup></div>
     </div>
+
+    <div class="mx-2 inline-action primary text-sm uppercase font-bold">Nick De Jaeger</div>
+
+    <div class="mx-2 inline-action primary"><sup class="font-bold">23</sup></div>
   </div>
+
 </header>

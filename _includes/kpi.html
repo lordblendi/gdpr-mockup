@@ -1,25 +1,27 @@
 <div class="flex flex-col sm:flex-row items-center px-2 bg-black-light">
   <!-- KPI FOR LOOP-->
   {% for kpi in site.data.kpis.data %}
-  <div class="flex flex-1 flex-col sm:flex-grow w-full m-2">
-    <!-- TOP ROW-->
-    <div class="flex lex-row items-center mt-2 mx-2 px-1">
-      <div class="flex-1 h8 text-grey">
-        <span class="font-normal">{{kpi.icon}}</span> <span class="">{{kpi.title}}</span>
+    <div class="flex flex-1 flex-col sm:flex-grow w-full m-2">
+      <!-- TOP ROW-->
+      <div class="flex flex-row items-center mt-2 mx-2 px-1 whitespace-no-wrap">
+        <div class="flex-1 h8 text-grey">
+          <span class="font-normal">{{kpi.icon}}</span> <span class="">{{kpi.title}}</span>
+        </div>
+        <div class="text-right h8 text-grey">
+          <span class="text-red">{{kpi.risk}}</span><span>{{kpi.total}}</span>
+        </div>
       </div>
-      <div class="text-right h8 text-grey">
-        <span class="text-red">{{kpi.risk}}</span><span>{{kpi.total}}</span>
+      
+      <!-- BOTTOM ROW-->
+      <!-- I build the string here while I'm taking the red % from the data file-->
+      {% assign backgroundStyle = "background: linear-gradient(to right, var(--color-red) "
+        | append: {{kpi.red}}
+        | append: ", var(--color-blue)); " %}
+
+      <div class="flex-grow text-white">
+        <div class="h-2 rounded-full m-2 mt-1" style="{{backgroundStyle}}">
+        </div>
       </div>
     </div>
-    <!-- BOTTOM ROW-->
-    <!-- I build the string here while I'm taking the red % from the data file-->
-  {% assign backgroundStyle = "background: linear-gradient(to right, var(--color-red) "
-      | append: {{kpi.red}}
-      | append: ", var(--color-blue)); " %}
-    <div class="flex-grow text-white">
-      <div class="h-2 rounded-full m-2 mt-1" style="{{backgroundStyle}}">
-      </div>
-    </div>
-  </div>
   {% endfor %}
 </div>
