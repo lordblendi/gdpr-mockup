@@ -29,6 +29,11 @@ body {
   background-color: #343434;
 }
 
+
+
+
+
+
 .bg-black-dark {
   background-color: #1E1E1E;
 }
@@ -42,6 +47,18 @@ body {
 .text-grey {
   color: #818181;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes loading {
   0% { background-position: 0 0; }
@@ -68,4 +85,18 @@ body {
     rgba(0,0,0,.1) 100%
   );
   animation: loading 3s linear infinite;
+}
+
+
+
+
+
+
+
+
+.blurred {
+  > *:not(.not-blurred) {
+    filter: blur(3px);
+    pointer-events: none;
+  }
 }
