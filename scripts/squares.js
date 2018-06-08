@@ -1,12 +1,18 @@
 var keepItemsSquared = (function keepItemsSquaredFunction() {
   $('.c-item').each(function() {
-    $(this).css({
-      'height': $(this).width() + 'px'
-    });
+
+    if ( $(window).width() >= 992 ) {
+
+      $(this).css({
+        'height': $(this).width() + 'px'
+      });
+      
+    }
+
   });
 
   return keepItemsSquaredFunction;
-}()); //auto-run
+}());
 
 $(window).on('resize', function() {
   keepItemsSquared();

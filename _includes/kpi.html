@@ -26,9 +26,44 @@
   {% endfor %}
 </div>
 
+
+
+
+<div class="c-tool-bar flex flex-col lg:flex-row items-stretch items-center pt-2 px-2 whitespace-no-wrap">
+
+  <div class="flex flex-1 items-center p-2">
+    <button class="btn btn--go btn--small-caps m-2"><span class="font-normal"></span> Add New Asset</button>
+  </div>
+
+  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-end p-2">
+    <div class="m-2">
+      <span class="mr-2 text-sm text-grey uppercase">Sort By</span>
+    </div>
+
+    <div class="m-2">
+      <div class="selector selector--singleselect selector--expanded JS_selector">
+        <div class="selector__item JS_selectorItem">
+          <div class="selector__block">
+            <div class="selector__blockPart selector__blockPart--field">Date Added</div>
+          </div>
+        </div>
+        <div class="selector__itemSeperator"></div>
+        <div class="selector__item selector__item--selected JS_selectorItem">
+          <div class="selector__block">
+            <div class="selector__blockPart selector__blockPart--field">Risk Level</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <main class="relative clearfix p-2">
 
-  <a href="#" class="c-item relative inline-block w-1/4 m-4 pt-6 bg-white rounded-lg no-underline text-black">
+  <a href="#" class="c-item relative inline-block lg:w-1/4 m-4 pt-6 bg-white rounded-lg no-underline text-black">
     <div class="flex flex-row justify-end mb-2 mx-6 text-sm text-grey uppercase">
       <span> 3 Months ago</span>
       <span class="ml-2">12</span>
@@ -51,7 +86,7 @@
       </div>
     </div>
 
-    <div class="flex flex-row px-6 py-4 mt-4 border-t-2 border-dashed">
+    <div class="c-item__footer absolute pin-b pin-l w-full flex flex-row px-6 py-4 mt-4 border-t-2 border-dashed bg-white">
       <div class="flex w-1/2 flex-row items-center pr-4">
         <div class="font-bold pr-4">
           <span class="secondary text-3xl">5</span><span>/6</span>
@@ -71,7 +106,7 @@
     </div>
   </a>
 
-  <a href="#" class="c-item c-item--alert  relative inline-block w-1/4 m-4 pt-6 bg-white rounded-lg no-underline text-black">
+  <a href="#" class="c-item c-item--alert  relative inline-block lg:w-1/4 m-4 pt-6 bg-white rounded-lg no-underline text-black">
     <div class="flex flex-row justify-end mb-2 mx-6 text-sm text-grey uppercase">
       <span> Recently</span>
       <span class="ml-2">3</span>
@@ -94,7 +129,7 @@
       </div>
     </div>
 
-    <div class="flex flex-row px-6 py-4 mt-4 border-t-2 border-dashed">
+    <div class="c-item__footer absolute pin-b pin-l w-full flex flex-row px-6 py-4 mt-4 border-t-2 border-dashed bg-white">
       <div class="flex w-1/2 flex-row items-center pr-4">
         <div class="font-bold pr-4">
           <span class="secondary text-3xl">1</span><span>/24</span>
