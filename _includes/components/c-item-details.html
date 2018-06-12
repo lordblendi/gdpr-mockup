@@ -7,47 +7,10 @@
   </div>
 
   <div class="inline-block float-left w-full md:w-1/4 p-6">
-
-    <div class="relative inline-block pt-6 bg-white-darker rounded-lg no-underline text-black">
-      <div class="flex flex-col mx-6">
-        <div class="mb-1 text-sm uppercase font-bold primary"><span class="font-normal"></span> Folder</div>
-
-        <div class="mb-1 -mx-4">
-          <input class="w-full py-2 px-4 text-2xl font-bold rounded-full" value="Contracts">
-        </div>
-
-        <div class="field field--not-empty">
-          <div class="field__label">Owned by</div>
-          <div class="field__data">
-            <div class="field__value">
-              <div class="selector selector--singleselect JS_selector">
-                <div class="selector__item JS_selectorItem--active selector__item--selected JS_selectorItem">
-                  <div class="selector__block">
-                    <div class="selector__blockPart selector__blockPart--field"> Nick De Jaeger</div>
-                  </div>
-                </div>
-              </div>
-              <input class="field__input" type="text" value="Not started">
-            </div>
-          </div>
-        </div>
-
-        <div class="my-2 -mx-2 p-2 bg-white rounded-lg text-sm" contenteditable="true">
-          <p>Tristique vitae augue eu, luctus condimentum dolor. Quis sem vulputate, viverra ipsum ut, suscipit risus.</p>
-        </div>
-        <div class="my-2 -mx-2 p-2 bg-white rounded-lg text-sm" contenteditable="true">
-          <span class="inline-block mr-1 mb-2 px-3 primary bg-grey-lighter rounded-full leading-normal">documents</span>
-          <span class="inline-block mr-1 mb-2 px-3 primary bg-grey-lighter rounded-full leading-normal">folder</span>
-          <span class="inline-block mr-1 mb-2 px-3 primary bg-grey-lighter rounded-full leading-normal">personal-data</span>
-          <span class="inline-block mr-1 mb-2 px-3 primary bg-grey-lighter rounded-full leading-normal">files</span>
-          <span class="inline-block mr-1 mb-2 px-3 primary bg-grey-lighter rounded-full leading-normal">company</span>
-          <span class="inline-block mr-1 mb-2 px-3 primary bg-grey-lighter rounded-full leading-normal">sensitive</span>
-        </div>
-      </div>
-    </div>
-
+    {% include components/c-item.html data=include.data %}
   </div>
-  <div class="inline-block float-left w-full md:w-3/4 p-6">
+
+  <div class="inline-block float-left w-full md:w-3/4 p-6 text-white">
     table
   </div>
 </div>
