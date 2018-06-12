@@ -9,13 +9,9 @@ layout: default
 {% include app-toolbar.html %}
 
 <!-- <main class="items-platform blurred relative clearfix py-2">-->
-<main class="items-platform relative clearfix py-2">
-  {% include components/c-item.html %}
-  {% include components/c-item.html notblurred=true %}
-  {% include components/c-item.html %}
-  {% include components/c-item.html %}
-  {% include components/c-item.html %}
-  {% include components/c-item.html %}
-  {% include components/c-item.html %}
-  {% include components/c-item.html %}
+<main class="items-platform blurred relative clearfix py-2">
+  {% for card in site.data.cards.data %}
+    {% include components/c-item.html data=card notblurred=true %}
+    {% include components/c-item.html data=card %}
+  {% endfor %}
 </main>

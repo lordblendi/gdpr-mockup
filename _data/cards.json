@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "time": "3 Months ago",
+      "comments": "12",
+      "type-icon":"",
+      "type-name":"SQL Server",
+      "name":"Human Resources",
+      "user":"Julie Beuselinck",
+      "description":"Tristique vitae augue eu, luctus condimentum dolor. Quis sem vulputate, viverra ipsum ut, suscipit risus.",
+      "tags":["HR","sql", "personal-data","internal", "company","sensitive"],
+      "risk-attributes":"5",
+      "total-attributes":"6",
+      "risk-records":"1k",
+      "total-records":"5k",
+      "notblurred": true
+    },
+    {
+      "time": "3 Months ago",
+      "comments": "12",
+      "type-icon":"",
+      "type-name":"SQL Server",
+      "name":"Human Resources",
+      "user":"Julie Beuselinck",
+      "description":"Tristique vitae augue eu, luctus condimentum dolor. Quis sem vulputate, viverra ipsum ut, suscipit risus.",
+      "tags":["HR","sql", "personal-data","internal", "company","sensitive"],
+      "risk-attributes":"5",
+      "total-attributes":"6",
+      "risk-records":"1k",
+      "total-records":"5k"
+    }
+  ]
+}
