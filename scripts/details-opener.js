@@ -34,10 +34,11 @@ function handleCardOnclick(card) {
   const dataJson = {{ site.data.cards | jsonify}};
   const data = dataJson['data'][dataIndex];
   const detailsHTML = `{% include components/c-item-details.html %}`;
-  console.log(detailsHTML);
 
   // insert the item details, display none
   $(cItems[detailsPlace]).after(detailsHTML);
+  // add tab functionality
+  setupTabs(".tabs-nav");
 
   // add tags
   jQuery.each(data['tags'], function(index, tag){
