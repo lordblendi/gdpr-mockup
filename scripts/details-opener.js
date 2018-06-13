@@ -33,10 +33,16 @@ function handleCardOnclick(card) {
   const dataIndex = $(card).attr('data-index');
   const dataJson = {{ site.data.cards | jsonify}};
   const data = dataJson['data'][dataIndex];
-  let detailsHTML = `{% include components/c-item-details.html %}`;
+  const detailsHTML = `{% include components/c-item-details.html %}`;
+  console.log(detailsHTML);
 
   // insert the item details, display none
   $(cItems[detailsPlace]).after(detailsHTML);
+
+  // add tags
+  jQuery.each(data['tags'], function(index, tag){
+    $('.JS_detailsTags').append(`{% include javascript/c-item-details-tag.html %}`);
+  });
 
   // add necessary classes
   $('body').addClass('item-details--visible');
