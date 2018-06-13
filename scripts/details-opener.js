@@ -55,3 +55,10 @@ function removeItemDetails() {
     $('.blurred, .not-blurred').removeClass('blurred not-blurred');
   });
 }
+
+// close details on resize
+$(window).on('resize', function() {
+  if ($('body').hasClass('item-details--visible')) {
+    $('.overlay-body').click();
+  }
+});
