@@ -1,19 +1,33 @@
 <div class="inline-block float-left w-full md:w-1/4 p-6">
-    <a class="relative inline-block pt-6 bg-white rounded-lg no-underline text-black cursor-pointer">
-      <div class="flex flex-row justify-end mb-2 mx-6 text-sm text-grey uppercase">
-        <span> ${data['time']}</span>
-        <span class="ml-2">${data['comments']}</span>
+  <div class="relative inline-block pt-6 bg-white-darker rounded-lg no-underline text-black">
+    <div class="flex flex-col mx-6">
+      <div class="mb-1 text-sm uppercase font-bold primary"><span class="font-normal">${data['type-icon']}</span>${data['type-name']}</div>
+
+      <div class="mb-1 -mx-4">
+        <input class="w-full py-2 px-4 text-2xl font-bold rounded-full" value="${data['name']}">
       </div>
 
-      <div class="flex flex-col mx-6">
-        <div class="mb-1 text-sm uppercase font-bold primary"><span class="font-normal">${data['type-icon']}</span>${data['type-name']}</div>
-        <div class="mb-1 text-2xl font-bold">${data['name']}</div>
-        <div class="mb-2 text-grey"> ${data['user']}</div>
-        <div class="my-2">
-          <p>${data['description']}</p>
-        </div>
-        <div class="my-2 JS_detailsTags">
+      <div class="field field--not-empty">
+        <div class="field__label">Owned by</div>
+        <div class="field__data">
+          <div class="field__value">
+            <div class="selector selector--singleselect JS_selector">
+              <div class="selector__item JS_selectorItem--active selector__item--selected JS_selectorItem">
+                <div class="selector__block">
+                  <div class="selector__blockPart selector__blockPart--field"> ${data['user']}</div>
+                </div>
+              </div>
+            </div>
+            <input class="field__input" type="text" value="Not started">
+          </div>
         </div>
       </div>
-    </a>
+
+      <div class="my-2 -mx-2 p-2 bg-white rounded-lg text-sm" contenteditable="true">
+        <p>${data['description']}</p>
+      </div>
+      <div class="my-2 -mx-2 p-2 bg-white rounded-lg text-sm JS_detailsTags" contenteditable="true">
+      </div>
+    </div>
+  </div>
 </div>
