@@ -22,8 +22,8 @@ function handleCardOnclick(card) {
   const diff = positionIncItems % itemsInRow;
   const detailsPlaceDiff = itemsInRow - diff;
   let detailsPlace = positionIncItems + detailsPlaceDiff;
-  if (detailsPlace >= cItems.length) {
-    detailsPlace = cItems.length - 1;
+  if (detailsPlace > cItems.length) {
+    detailsPlace = cItems.length;
   }
   // making sure the index is good
   detailsPlace--;
