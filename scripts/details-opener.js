@@ -21,7 +21,7 @@ function handleCardOnclick(card) {
   if (detailsPlace >= cItems.length) {
     detailsPlace = cItems.length - 1;
   }
-  // making sure the index is good 
+  // making sure the index is good
   detailsPlace--;
 
   const dataIndex = $(card).attr('data-index');
@@ -31,4 +31,13 @@ function handleCardOnclick(card) {
   let detailsHTML = `{% include components/c-item-details.html %}`;
 
   $(cItems[detailsPlace]).after(detailsHTML);
+
+  $('body').addClass('item-details--visible');
+  openOverlay();
+}
+
+
+function removeItemDetails(){
+  $('body').removeClass('item-details--visible');
+  $('.JS_item-details').remove();
 }
