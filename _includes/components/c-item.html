@@ -1,10 +1,10 @@
-{% assign classes =  "relative inline-block pt-6 bg-white rounded-lg no-underline text-black" %}
+{% assign classes =  "relative inline-block pt-6 bg-white rounded-lg no-underline text-black cursor-pointer" %}
 
 {% if include.cItem %}
-  {% assign classes =  "c-item relative inline-block pt-6 bg-white rounded-lg no-underline text-black" %}
+  {% assign classes =  "c-item relative inline-block pt-6 bg-white rounded-lg no-underline text-black cursor-pointer" %}
 {% endif %}
 
-  <a href="#" class="{{classes}}">
+  <a class="{{classes}}">
     <div class="flex flex-row justify-end mb-2 mx-6 text-sm text-grey uppercase">
       <span> {{include.data.time}}</span>
       <span class="ml-2">{{include.data.comments}}</span>
