@@ -36,12 +36,14 @@ function handleCardOnclick(card) {
   $(card).addClass('not-blurred');
   $(cardList).addClass('blurred');
   openOverlay();
+  slideDown($('.JS_item-details'));
 }
 
 
-function removeItemDetails(){
-  $('body').removeClass('item-details--visible');
-  $('.JS_item-details').remove();
-
-  $('.blurred, .not-blurred').removeClass('blurred not-blurred');
+function removeItemDetails() {
+  slideUp($('.JS_item-details'), function() {
+    $('body').removeClass('item-details--visible');
+    $('.JS_item-details').remove();
+    $('.blurred, .not-blurred').removeClass('blurred not-blurred');
+  });
 }
