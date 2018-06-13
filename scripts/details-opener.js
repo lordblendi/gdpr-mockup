@@ -33,6 +33,8 @@ function handleCardOnclick(card) {
   $(cItems[detailsPlace]).after(detailsHTML);
 
   $('body').addClass('item-details--visible');
+  $(card).addClass('not-blurred');
+  $(cardList).addClass('blurred');
   openOverlay();
 }
 
@@ -40,4 +42,6 @@ function handleCardOnclick(card) {
 function removeItemDetails(){
   $('body').removeClass('item-details--visible');
   $('.JS_item-details').remove();
+
+  $('.blurred, .not-blurred').removeClass('blurred not-blurred');
 }
