@@ -52,6 +52,9 @@ function handleCardOnclick(card) {
       $(card).addClass('not-blurred');
       $(cardList).addClass('blurred');
       openOverlay();
+
+      // init table expand/collapse actions
+      initExpandCollapseActions();
   });
 }
 
