@@ -45,21 +45,22 @@ function handleCardOnclick(card) {
     $('.JS_detailsTags').append(`{% include javascript/card-details-tag.html %}`);
   });
 
-  // add necessary classes
-  $('body').addClass('item-details--visible');
-  $(card).addClass('not-blurred');
-  $(cardList).addClass('blurred');
-  openOverlay();
   // slide down item details display none -> display block
-  slideDown($('.JS_item-details'));
+  slideDown($('.JS_item-details'), function(){
+      // add necessary classes
+      $('body').addClass('item-details--visible');
+      $(card).addClass('not-blurred');
+      $(cardList).addClass('blurred');
+      openOverlay();
+  });
 }
 
 // remove item details and the blurriness
 function removeItemDetails() {
+  $('.blurred, .not-blurred').removeClass('blurred not-blurred');
   slideUp($('.JS_item-details'), function() {
     $('body').removeClass('item-details--visible');
     $('.JS_item-details').remove();
-    $('.blurred, .not-blurred').removeClass('blurred not-blurred');
   });
 }
 
