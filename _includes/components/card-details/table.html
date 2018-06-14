@@ -1,163 +1,35 @@
 <div class="itemBox">
   <ul class="itemBox__row itemBox__row--thead">
-    <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand">
+    <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand_header">
       <div class="itemBox__cellInner">
-        <div class="itemBox__action"></div>
+        <div class="itemBox__action"></div>
       </div>
     </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner">Nr</div>
-    </li>
-    <li class="itemBox__cell flex-grow-2">
-      <div class="itemBox__cellInner">Title</div>
-    </li>
-    <li class="itemBox__cell flex-grow-2">
-      <div class="itemBox__cellInner">Assigned to</div>
-    </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner">Reported by customer</div>
-    </li>
+    {% for item in site.data.table.header %}
+      <li class="itemBox__cell">
+        <div class="itemBox__cellInner">{{item}}</div>
+      </li>
+    {% endfor %}
   </ul>
-
-  <ul class="itemBox__row itemBox__row--item">
-    <li class="itemBox__cell flex-grow-0 itemBox__cell--action">
-      <div class="itemBox__cellInner"></div>
-    </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner">
-        <div class="itemBox__value">
-          <div class="selector selector--expanded">
-            <div class="selector__item JS_selectorItem--active selector__item--selected">
-              <div class="selector__block">
-                <div class="selector__blockPart selector__blockPart--field">395415</div>
-              </div>
-            </div>
-          </div>
+  {% for row in site.data.table.rows %}
+    {% assign rowIndex = forloop.index %}
+    <ul class="itemBox__row itemBox__row--item">
+      <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand">
+        <div class="itemBox__cellInner">
+          <div class="itemBox__action"></div>
         </div>
-      </div>
-    </li>
-    <li class="itemBox__cell flex-grow-2 itemBox__cell--permalink">
-      <div class="itemBox__cellInner">Bulk update speed regressed in 282.0</div>
-    </li>
-    <li class="itemBox__cell flex-grow-2">
-      <div class="itemBox__cellInner">
-        <div class="selector selector--singleselect">
-          <div class="selector__item JS_selectorItem--active selector__item--selected">
-            <div class="selector__block">
-              <span class="selector__blockPart selector__blockPart--field">Vasya Aksyonov</span>
-            </div>
+      </li>
+      {% for item in row %}
+        {% assign rowItemIndex = forloop.index | minus: 1 %}
+        <li class="itemBox__cell">
+          <div class="itemBox__cellInner">
+            {{item}} [{{rowIndex}}:{{rowItemIndex}}]
           </div>
-        </div>
-      </div>
-    </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner">
-        <div class="selector selector--singleselect selector--expanded JS_selector">
-          <div class="selector__item JS_selectorItem--active selector__item--selected JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--prefix"></div>
-            </div>
-          </div>
-          <div class="selector__itemSeperator"></div>
-          <div class="selector__item JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--prefix"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="itemBox__row itemBox__row--item">
-    <li class="itemBox__cell flex-grow-0 itemBox__cell--action">
-      <div class="itemBox__cellInner"></div>
-    </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner">
-        <div class="selector selector--expanded">
-          <div class="selector__item JS_selectorItem--active selector__item--selected">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--field">35825</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="itemBox__cell flex-grow-2 itemBox__cell--permalink">
-      <div class="itemBox__cellInner">Write spec for semantic search</div>
-    </li>
-    <li class="itemBox__cell flex-grow-2">
-      <div class="itemBox__cellInner">
-        <div class="selector selector--singleselect">
-          <div class="selector__item JS_selectorItem--active selector__item--selected">
-            <div class="selector__block">
-              <span class="selector__blockPart selector__blockPart--field">Vincent Goosens</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner">
-        <div class="selector selector--singleselect selector--expanded JS_selector">
-          <div class="selector__item JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--prefix"></div>
-            </div>
-          </div>
-          <div class="selector__itemSeperator"></div>
-          <div class="selector__item JS_selectorItem--active selector__item--selected JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--prefix"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="itemBox__row itemBox__row--item">
-    <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand">
-      <div class="itemBox__cellInner">
-        <div class="itemBox__action"></div>
-      </div>
-    </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner"></div>
-    </li>
-    <li class="itemBox__cell flex-grow-2 itemBox__cell--permalink">
-      <div class="itemBox__cellInner">Integrated Release Management</div>
-    </li>
-    <li class="itemBox__cell flex-grow-2">
-      <div class="itemBox__cellInner">
-        <div class="selector selector--singleselect">
-          <div class="selector__item JS_selectorItem--active selector__item--selected">
-            <div class="selector__block">
-              <span class="selector__blockPart selector__blockPart--field">_Not Assigned</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner">
-        <div class="selector selector--singleselect selector--expanded JS_selector">
-          <div class="selector__item JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--prefix"></div>
-            </div>
-          </div>
-          <div class="selector__itemSeperator"></div>
-          <div class="selector__item JS_selectorItem--active selector__item--selected JS_selectorItem">
-            <div class="selector__block">
-              <div class="selector__blockPart selector__blockPart--prefix"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
+        </li>
+      {% endfor %}
+    </ul>
+    {% include components/card-details/table-inner.html%}
+  {% endfor %}
 
   <ul class="itemBox__row itemBox__row--tfoot">
     <li class="itemBox__cell">
