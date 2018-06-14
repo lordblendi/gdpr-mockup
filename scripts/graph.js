@@ -18,7 +18,6 @@ function drawChart() {
   setTimeout(function () {
     let panels = $('.JS_panels');
     let panelWidth = Math.round(panels.width());
-    console.log(panels, panelWidth);
     // Set chart options
     let options = {
       width: panelWidth,
