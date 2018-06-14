@@ -1,16 +1,16 @@
 {% assign classes =  "relative inline-block pt-6 bg-white rounded-lg no-underline text-black cursor-pointer" %}
 
 {% if include.cItem %}
-  {% assign classes =  "c-item relative inline-block pt-6 bg-white rounded-lg no-underline text-black cursor-pointer" %}
+  {% assign classes =  "card" %}
 {% endif %}
 
   <a class="{{classes}}">
-    <div class="flex flex-row justify-end mb-2 mx-6 text-sm text-grey uppercase">
+    <header class="card__header">
       <span> {{include.data.time}}</span>
       <span class="ml-2">{{include.data.comments}}</span>
-    </div>
+    </header>
 
-    <div class="flex flex-col mx-6">
+    <div class="card__body">
       <div class="mb-1 text-sm uppercase font-bold primary"><span class="font-normal">{{include.data.type-icon}}</span>{{include.data.type-name}}</div>
       <div class="mb-1 text-2xl font-bold">{{include.data.name}}</div>
       <div class="mb-2 text-grey"> {{include.data.user}}</div>
@@ -19,13 +19,13 @@
       </div>
       <div class="my-2">
         {% for tag in include.data.tags -%}
-          <span class="inline-block mr-1 mb-2 px-3 primary bg-grey-lighter rounded-full leading-normal">{{tag}}</span>
+          <span class="tag primary">{{tag}}</span>
         {% endfor %}
       </div>
     </div>
 
     {% if include.showRisk %}
-      <div class="c-item__footer absolute pin-b pin-l w-full flex flex-row px-6 py-4 mt-4 border-t-2 border-dashed bg-white">
+      <footer class="card__footer">
         <div class="c-item__stat relative flex w-1/2 flex-row items-center justify-center md:justify-start mr-1 overflow-hidden">
           <div class="font-bold pr-4">
             <span class="secondary text-3xl">{{include.data.risk-attributes}}</span><span>/{{include.data.total-attributes}}</span>
@@ -42,6 +42,6 @@
             <span class="secondary inline-block">At risk</span><span>/records</span>
           </div>
         </div>
-      </div>
+      </footer>
     {% endif %}
   </a>

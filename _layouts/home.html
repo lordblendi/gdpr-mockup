@@ -18,7 +18,7 @@ layout: default
       {% assign classes = "JS_c-item inline-block not-blurred float-left md:w-1/2 lg:w-1/3 xl:w-1/4 p-6" %}
     {% endif %}
     <div class="{{classes}}" data-index="{{forloop.index | minus: 1}}">
-      {% include components/c-item.html data=card showRisk=true cItem=true %}
+      {% include components/card.html data=card showRisk=true cItem=true %}
     </div>
   {% endfor %}
 </main>
