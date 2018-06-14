@@ -5,28 +5,28 @@
       "title":"Asset",
       "risk":"3",
       "total": "/9",
-      "red":"30%"
+      "red":"33.33"
     },
     {
       "icon":"",
       "title":"Attribures",
       "risk":"32",
       "total": "/48",
-      "red":"60%"
+      "red":"66.67"
     },
     {
       "icon":"",
       "title":"Records",
       "risk":"16K",
       "total": "/39K",
-      "red":"40%"
+      "red": "41.03"
     },
     {
       "icon":"",
       "title":"Risk Level",
       "risk":"72%",
       "total": "",
-      "red":"72%"
+      "red":"72"
     }
   ]
 }

@@ -14,12 +14,21 @@
 
       <!-- BOTTOM ROW-->
       <!-- I build the string here while I'm taking the red % from the data file-->
-      {% assign backgroundStyle = "background: linear-gradient(to right, var(--color-red) "
-        | append: {{kpi.red}}
-        | append: ", var(--color-blue)); " %}
+      {% assign beforekpi = kpi.red | minus: 10 %}
+      {% assign afterkpi = kpi.red | plus: 10 %}
+
+      {% assign backgroundStyle = "background: linear-gradient(to right, rgba(230,22,22,1) 0%, rgba(230,22,22,1) "
+      | append: {{beforekpi}}
+      | append: "%, rgba(157,84,111,1) "
+      | append: {{kpi.red}}
+      | append: "%, rgba(157,84,111,1) "
+      | append: {{kpi.red}}
+      | append: "%, rgba(0,198,255,1) "
+      | append: {{afterkpi}}
+      | append: "%, rgba(0,198,255,1) 100%);" %}
 
       <div class="flex-grow text-white">
-        <div class="h-2 rounded-full m-2 mt-1" style="{{backgroundStyle}}">
+        <div class="h-2 rounded-full m-2 mt-1" style="{{oldbackgroundStyle}} {{backgroundStyle}}">
         </div>
       </div>
     </div>
