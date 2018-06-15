@@ -12,7 +12,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     },
     {
       "time": "1 Month ago",
@@ -26,7 +27,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": "card--alert"
     },
     {
       "time": "1 Month ago",
@@ -40,7 +42,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     },
     {
       "time": "3 Months ago",
@@ -54,7 +57,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     },
     {
       "time": "1 Month ago",
@@ -68,7 +72,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     },
     {
       "time": "1 Month ago",
@@ -82,7 +87,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     },
     {
       "time": "3 Months ago",
@@ -96,7 +102,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     },
     {
       "time": "1 Month ago",
@@ -110,7 +117,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     },
     {
       "time": "1 Month ago",
@@ -124,7 +132,8 @@
       "risk-attributes":"5",
       "total-attributes":"6",
       "risk-records":"1k",
-      "total-records":"5k"
+      "total-records":"5k",
+      "is-alert": ""
     }
   ]
 }
