@@ -26,12 +26,15 @@ function drawChart() {
         iterations: 0,
         node: {
           label: {
-            fontName: 'Times-Roman',
+            //fontName: 'Times-Roman',
+            fontName: 'Source Sans Pro',
             fontSize: 14,
+            fontWeight: 'normal',
             color: 'white',
             bold: true
           },
           interactivity: true,
+          width: 5,            // Thickness of the node.
         },
         link: {
           colorMode: 'target'

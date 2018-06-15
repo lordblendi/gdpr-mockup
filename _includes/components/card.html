@@ -26,7 +26,7 @@
 
     {% if include.showRisk %}
       <footer class="card__footer">
-        <div class="c-item__stat relative flex w-1/2 flex-row items-center justify-center md:justify-start mr-1 overflow-hidden">
+        <div class="card__stat relative flex w-1/2 flex-row items-center justify-center md:justify-start mr-1 overflow-hidden">
           <div class="font-bold pr-4">
             <span class="secondary text-3xl">{{include.data.risk-attributes}}</span><span>/{{include.data.total-attributes}}</span>
           </div>
@@ -34,7 +34,7 @@
             <span class="secondary inline-block">At risk</span><span>/personal attributes</span>
           </div>
         </div>
-        <div class="c-item__stat relative flex w-1/2 flex-row items-center justify-center md:justify-start mr-1 overflow-hidden">
+        <div class="card__stat relative flex w-1/2 flex-row items-center justify-center md:justify-start mr-1 overflow-hidden">
           <div class="font-bold pr-4">
             <span class="secondary text-3xl">{{include.data.risk-records}}</span><span>/{{include.data.total-records}}</span>
           </div>
