@@ -55,6 +55,12 @@ body {
 
 
 
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  font-style: italic;
+  color: #818181;
+  display: block; /* For Firefox */
+}
 
 
 
