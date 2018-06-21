@@ -50,7 +50,8 @@ function handleCardOnclick(card) {
       // add necessary classes
       $('body').addClass('item-details--visible');
       $(card).addClass('not-blurred');
-      $(cardList).addClass('blurred');
+      // $(cardList).addClass('blurred');
+      $('main, .c-tool-bar, .kpi-bar, .header-bar').addClass('blurred');
       openOverlay();
 
       // init table expand/collapse actions
