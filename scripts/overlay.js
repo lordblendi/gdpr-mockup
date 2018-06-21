@@ -1,6 +1,7 @@
 // onclick action on overlay to close item detail
 $('.overlay-body').on('click', function() {
-  if ($(this).closest('.item-details--visible').length > 0) {
+  if ($(this).closest('.item-details--visible').length > 0 ||
+      $(this).closest('.item-create--visible').length > 0) {
     closeOverlayAndDetails();
   }
 });
@@ -8,8 +9,12 @@ $('.overlay-body').on('click', function() {
 // close overlay and item detail
 function closeOverlayAndDetails() {
   $(".overlay-body").removeClass('opacity-100 pointer-events-auto');
-
-  removeItemDetails();
+  if($('body').hasClass('item-details--visible')) {
+    removeItemDetails();
+  }
+  else if ($('body').hasClass('item-create--visible')) {
+    closeCreateItem();
+  }
 }
 
 // open overlay with or without opacity 100
