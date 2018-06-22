@@ -11,14 +11,7 @@
         <div class="field__label">Owned by</div>
         <div class="field__data">
           <div class="field__value">
-            <div class="selector selector--singleselect selector--expanded selector--readonly ">
-              <div class="selector__item JS_selectorItem--active selector__item--selected JS_selectorItem">
-                <div class="selector__block">
-                  <div class="selector__blockPart selector__blockPart--field"> ${data['user']}</div>
-                </div>
-              </div>
-            </div>
-            <input class="field__input" type="text" value="Not started">
+            {% include components/selector.html selectorData=",,, ${data['user']}" expanded="true" singleselect="true" selectedIndexes="1" readonly="true"%}
           </div>
         </div>
       </div>
