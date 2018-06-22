@@ -11,3 +11,9 @@
   margin-bottom: 1rem;
   float: left;
 }
+
+.selector-data-types--visible {
+  .overlay-body {
+    z-index: 60;
+  }
+}

@@ -9,7 +9,11 @@ $('.overlay-body').on('click', function() {
 // close overlay and item detail
 function closeOverlayAndDetails() {
   $(".overlay-body").removeClass('opacity-100 pointer-events-auto');
-  if($('body').hasClass('item-details--visible')) {
+
+  if($('body').hasClass('selector-data-types--visible')) {
+    closeDataTypeSelectorUntouched();
+  }
+  else if($('body').hasClass('item-details--visible')) {
     removeItemDetails();
   }
   else if ($('body').hasClass('item-create--visible')) {
