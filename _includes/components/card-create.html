@@ -3,7 +3,14 @@
   <div class="inline-block float-left w-full md:w-1/4 p-6 mt-8">
     <div class="relative inline-block pt-6 bg-white-darker rounded-lg no-underline text-black">
       <div class="flex flex-col mx-6">
-        <div class="mb-2 text-sm uppercase font-bold primary"><span class="font-normal"></span>SQL Server</div>
+        <div class="field field--not-empty">
+          <div class="field__label">Type</div>
+          <div class="field__data">
+            <div class="field__value">
+              {% include components/selector.html selectorData=",,, SQL Server" singleselect="true" popupId="#multiSelector-data-types" selectedIndexes="1" %}
+            </div>
+          </div>
+        </div>
 
         <div class="mb-2">
           <input class="w-full py-2 px-4 text-2xl font-bold rounded-full" value="" placeholder="Name">
