@@ -6,6 +6,11 @@
     " Oracle Server",
     " Dropbox",
     " Virtuoso",
-    " Owlim"
+    " Owlim",
+    " Sharepoint",
+    " MS Office",
+    " MS SQL",
+    " Other SQL",
+    " CSV"
   ]
 }
