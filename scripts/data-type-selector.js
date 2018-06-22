@@ -17,7 +17,11 @@ $('.JS_dataTypeSelector').on('click', function() {
   });
 });
 
+/*
+  close the popup and make sure the overlay is still there just without the darkness
+*/
 function closeDataTypeSelectorUntouched() {
   $('body').removeClass('selector-data-types--visible');
   $('.multiSelector--visible').removeClass('multiSelector--visible');
+  openOverlay();
 }
