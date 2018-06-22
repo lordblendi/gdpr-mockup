@@ -10,19 +10,7 @@
     </div>
 
     <div class="m-2">
-      <div class="selector selector--singleselect selector--expanded JS_selector">
-        <div class="selector__item JS_selectorItem">
-          <div class="selector__block">
-            <div class="selector__blockPart selector__blockPart--field selector__blockPart--small-caps">Date Added</div>
-          </div>
-        </div>
-        <div class="selector__itemSeperator"></div>
-        <div class="selector__item selector__item--selected JS_selectorItem">
-          <div class="selector__block">
-            <div class="selector__blockPart selector__blockPart--field selector__blockPart--small-caps">Risk Level</div>
-          </div>
-        </div>
-      </div>
+      {% include components/selector.html selectorData=",,,Date Added;,,,Risk Level" expanded="true" singleselect="true" selectedIndexes="2" %}
     </div>
   </div>
 </div>
