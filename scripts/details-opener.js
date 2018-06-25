@@ -39,6 +39,8 @@ function handleCardOnclick(card) {
   $(cItems[detailsPlace]).after(detailsHTML);
   // add tab functionality
   setupTabs(".tabs-nav");
+  // add comment panel toggle
+  setupCommentToggle();
 
   // add tags
   jQuery.each(data['tags'], function(index, tag){
