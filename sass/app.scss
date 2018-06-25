@@ -102,3 +102,37 @@ body {
     pointer-events: none;
   }
 }
+
+
+
+
+.panel {
+  float: left;
+}
+.panel-edit {
+  width: 25%;
+}
+.panel-table {
+  width: 50%;
+}
+.panel-comments {
+  width: 25%;
+}
+
+
+.comment-field {
+  margin-top: 0;
+}
+.comment-field__input {
+  min-height: auto;
+  border-radius: 100px;
+}
+.comment-field__input input, .comment-field__input textarea, .comment-field__input .textarea {
+  min-height: auto;
+  padding: 5px 10px;
+  height: 30px;
+  border-radius: 100px;
+}
+.comments-seperator span {
+  background-color: #1e1e1e;
+}
