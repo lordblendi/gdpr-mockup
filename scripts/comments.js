@@ -1,5 +1,5 @@
 function setupCommentToggle() {
-  resizeTextarea('.JS_autosize');
+  // resizeTextarea('.JS_autosize');
 
   $('.JS_comments-toggle').on('click', function() {
     const toggle = $(this);
@@ -8,7 +8,11 @@ function setupCommentToggle() {
 
     if ($(details).hasClass('panel-comments--visible')) {
       readCommentsFunctionality();
-      resizeTextarea('.JS_autosize');
+      // resizeTextarea('.JS_autosize');
+
+      setTimeout(function() {
+        $('.panel-comments').css('display', 'block');
+      }, 300);
     }
 
     // always redraw charts to make sure it has the good width
@@ -26,15 +30,15 @@ function readCommentsFunctionality() {
   });
 }
 
-function resizeTextarea(selector) {
-  // setting initial height
-  setTimeout(function() {
-    $(selector).css('height', 'auto');
-    $(selector).height($(selector)[0].scrollHeight);
-  }, 100);
-
-  $(selector).off('keyup').on('keyup', function() {
-    $(this).css('height', 'auto');
-    $(this).height(this.scrollHeight);
-  });
-}
+// function resizeTextarea(selector) {
+//   // setting initial height
+//   setTimeout(function() {
+//     $(selector).css('height', 'auto');
+//     $(selector).height($(selector)[0].scrollHeight);
+//   }, 100);
+//
+//   $(selector).off('keyup').on('keyup', function() {
+//     $(this).css('height', 'auto');
+//     $(this).height(this.scrollHeight);
+//   });
+// }

@@ -113,11 +113,11 @@ body {
   }
   &-table {
     width: 75%;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.2s ease-in-out;
   }
   &-comments {
     width: 0%;
-    transition: all 0.4s ease-in-out;
+    transition: width 0.2s ease-in-out, opacity 0.4s ease-in-out;
     opacity: 0;
     display: none;
   }
@@ -129,7 +129,6 @@ body {
     .panel-comments {
       width: 25%;
       opacity: 1;
-      display: block;
     }
   }
 }
