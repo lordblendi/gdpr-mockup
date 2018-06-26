@@ -1,11 +1,15 @@
 <div class="multiSelector" id="multiSelector-data-types">
   <div class="itemBox JS_optionsChildren">
     {% for item in site.data.data-types.items %}
-      <ul class="itemBox__row itemBox__row--item JS_filterableCell">
+    <div class="itemBox__row">
+      <ul class="itemBox__rowInner itemBox__rowInner--item JS_filterableCell">
         <li class="itemBox__cell">
-          <div class="itemBox__cellInner"><div class="itemBox__value JS_text">{{item}}</div></div>
+          <div class="itemBox__cellInner">
+            <div class="itemBox__value JS_text">{{item}}</div>
+          </div>
         </li>
       </ul>
+    </div>
     {% endfor %}
   </div>
   <!-- /.itemBox -->

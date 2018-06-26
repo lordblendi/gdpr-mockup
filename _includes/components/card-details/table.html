@@ -1,39 +1,44 @@
 <div class="itemBox itemBox--gdpr">
-  <ul class="itemBox__row itemBox__row--thead">
-    <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand_header">
-      <div class="itemBox__cellInner">
-        <div class="itemBox__action"></div>
-      </div>
-    </li>
-    {% for item in site.data.table.header %}
+  <div class="itemBox__row">
+    <ul class="itemBox__rowInner itemBox__rowInner--thead">
+      <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand_header">
+        <div class="itemBox__cellInner">
+          <div class="itemBox__action"></div>
+        </div>
+      </li>
+      {% for item in site.data.table.header %}
       <li class="itemBox__cell">
         <div class="itemBox__cellInner">{{item}}</div>
       </li>
-    {% endfor %}
-  </ul>
-  {% for row in site.data.table.rows %}
-    {% assign rowIndex = forloop.index %}
-    <ul class="itemBox__row itemBox__row--item">
+      {% endfor %}
+    </ul>
+  </div>
+  {% for row in site.data.table.rows %} {% assign rowIndex = forloop.index %}
+  <div class="itemBox__row">
+    <ul class="itemBox__rowInner itemBox__rowInner--item">
       <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand">
         <div class="itemBox__cellInner">
           <div class="itemBox__action"></div>
         </div>
       </li>
-      {% for item in row %}
-        {% assign rowItemIndex = forloop.index | minus: 1 %}
-        <li class="itemBox__cell">
-          <div class="itemBox__cellInner">
-            {{item}} [{{rowIndex}}:{{rowItemIndex}}]
-          </div>
-        </li>
+      {% for item in row %} {% assign rowItemIndex = forloop.index | minus: 1 %}
+      <li class="itemBox__cell">
+        <div class="itemBox__cellInner">
+          {{item}} [{{rowIndex}}:{{rowItemIndex}}]
+        </div>
+      </li>
       {% endfor %}
     </ul>
     {% include components/card-details/table-inner.html%}
+  </div>
   {% endfor %}
 
-  <ul class="itemBox__row itemBox__row--tfoot">
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner text-xs">All <span>10</span> items loaded</div>
-    </li>
-  </ul>
-</div><!-- /.itemBox -->
+  <div class="itemBox__row">
+    <ul class="itemBox__rowInner itemBox__rowInner--tfoot">
+      <li class="itemBox__cell">
+        <div class="itemBox__cellInner text-xs">All <span>10</span> items loaded</div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /.itemBox -->

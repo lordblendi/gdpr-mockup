@@ -1,28 +1,33 @@
 <div class="itemBox itemBox--sublist animate-fadein JS_itemBox--children JS_children-closed" style="display:none;">
-  <ul class="itemBox__row itemBox__row--thead">
-    {% for item in site.data.table.example-header %}
+  <div class="itemBox__row">
+    <ul class="itemBox__rowInner itemBox__rowInner--thead">
+      {% for item in site.data.table.example-header %}
       <li class="itemBox__cell">
         <div class="itemBox__cellInner">{{item}}</div>
       </li>
-    {% endfor %}
-  </ul>
-  {% for row in site.data.table.example-rows %}
-    {% assign rowIndex = forloop.index %}
-    <ul class="itemBox__row itemBox__row--item">
-      {% for item in row %}
-        {% assign rowItemIndex = forloop.index | minus: 1 %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% for row in site.data.table.example-rows %} {% assign rowIndex = forloop.index %}
+    <div class="itemBox__row">
+      <ul class="itemBox__rowInner itemBox__rowInner--item">
+        {% for item in row %} {% assign rowItemIndex = forloop.index | minus: 1 %}
         <li class="itemBox__cell">
           <div class="itemBox__cellInner">
             {{item}} [{{rowIndex}}:{{rowItemIndex}}]
           </div>
         </li>
-      {% endfor %}
-    </ul>
+        {% endfor %}
+      </ul>
+    </div>
   {% endfor %}
 
-  <ul class="itemBox__row itemBox__row--tfoot">
-    <li class="itemBox__cell">
-      <div class="itemBox__cellInner text-xs">All <span>5</span> items loaded</div>
-    </li>
-  </ul>
+  <div class="itemBox__row">
+    <ul class="itemBox__rowInner itemBox__rowInner--tfoot">
+      <li class="itemBox__cell">
+        <div class="itemBox__cellInner text-xs">All <span>5</span> items loaded</div>
+      </li>
+    </ul>
+  </div>
 </div>
