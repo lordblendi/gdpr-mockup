@@ -3,7 +3,7 @@
     <ul class="itemBox__rowInner itemBox__rowInner--thead">
       <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand_header">
         <div class="itemBox__cellInner">
-          <div class="itemBox__action"></div>
+          <button class="itemBox__action"></button>
         </div>
       </li>
       {% for item in site.data.table.header %}
@@ -18,7 +18,7 @@
     <ul class="itemBox__rowInner itemBox__rowInner--item">
       <li class="itemBox__cell flex-grow-0 itemBox__cell--action JS_expand">
         <div class="itemBox__cellInner">
-          <div class="itemBox__action"></div>
+          <button class="itemBox__action"></button>
         </div>
       </li>
       {% for item in row %} {% assign rowItemIndex = forloop.index | minus: 1 %}
