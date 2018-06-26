@@ -58,6 +58,11 @@ function handleCardOnclick(card) {
 
       // init table expand/collapse actions
       initExpandCollapseActions();
+
+      // scrollToDetails
+      $('html,body').animate({
+         scrollTop: $(".JS_item-details").offset().top - 100
+      });
   });
 }
 
