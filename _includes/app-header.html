@@ -11,7 +11,19 @@
     </div>
 
     <div class="m-2">
-      {% include components/selector.html selectorData=",,, Overview;,,, Risk Analisys" expanded="true" singleselect="true" selectedIndexes="2" %}
+      <div class="selector JS_selector selector--expanded selector--required  selector--singleselect">
+        <div class="selector__item JS_selectorItem  JS_viewSelector" tabindex="0" data-view="overview">
+          <div class="selector__block">
+            <div class="selector__blockPart selector__blockPart--field JS_text"> Overview</div>
+          </div>
+        </div>
+        <div class="selector__itemSeperator"></div>
+        <div class="selector__item JS_selectorItem selector__item--selected JS_selectorItem--active JS_viewSelector" tabindex="0" data-view="risk">
+          <div class="selector__block">
+            <div class="selector__blockPart selector__blockPart--field JS_text"> Risk Analisys</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="m-2">

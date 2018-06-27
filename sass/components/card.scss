@@ -91,3 +91,11 @@
     box-shadow: 0 5px 0 0 red;
   }
 }
+
+
+.view--overview {
+  .card__footer {
+    bottom: -150px;
+    pointer-events: none;
+  }
+}
