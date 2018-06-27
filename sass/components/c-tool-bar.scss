@@ -3,11 +3,19 @@
 
 
 .c-tool-bar {
+  position: relative;
+  min-height: 30px;
 
   input {
   	border-radius: 9999px;
     padding: 0.325rem 1rem;
     font-size: 0.85rem;
     background-color: #999;
+    height: 100%;
+    transition: all .3s ease-in-out;
+
+    &:focus {
+      background-color: #FFF;
+    }
   }
 }
