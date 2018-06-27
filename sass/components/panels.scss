@@ -1,0 +1,29 @@
+---
+---
+
+.panel {
+  float: left;
+  &-edit {
+    width: 25%;
+  }
+  &-table {
+    width: 75%;
+    transition: width 0.2s ease-in-out;
+  }
+  &-comments {
+    width: 0%;
+    transition: width 0.2s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+    display: none;
+  }
+
+  &-comments--visible {
+    .panel-table {
+      width: 50%;
+    }
+    .panel-comments {
+      width: 25%;
+      opacity: 1;
+    }
+  }
+}
