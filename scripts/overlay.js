@@ -1,22 +1,18 @@
 // onclick action on overlay to close item detail
 $('.overlay-body').on('click', function() {
-  if ($(this).closest('.item-details--visible').length > 0 ||
-      $(this).closest('.item-create--visible').length > 0) {
-    closeOverlayAndDetails();
-  }
+  closeOverlay();
+  closeOverlayExtraActions();
 });
 
-// close overlay and item detail
-function closeOverlayAndDetails() {
-  $(".overlay-body").removeClass('opacity-100 pointer-events-auto');
-
-  if($('body').hasClass('selector-data-types--visible')) {
+// do extra actions related to closing overlay
+function closeOverlayExtraActions() {
+  if ($('body').hasClass('selector-data-types--visible')) {
     closeDataTypeSelectorUntouched();
-  }
-  else if($('body').hasClass('item-details--visible')) {
+  } else if ($('body').hasClass('selector-filter--visible')) {
+    closeFilterSelectorUntouched();
+  } else if ($('body').hasClass('item-details--visible')) {
     removeItemDetails();
-  }
-  else if ($('body').hasClass('item-create--visible')) {
+  } else if ($('body').hasClass('item-create--visible')) {
     closeCreateItem();
   }
 }

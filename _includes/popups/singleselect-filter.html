@@ -1,0 +1,18 @@
+<div class="multiSelector" id="multiSelector-filter">
+  <div class="itemBox JS_optionsChildren">
+    {% for item in site.data.filter.items %}
+    <div class="itemBox__row">
+      <ul class="itemBox__rowInner itemBox__rowInner--item JS_filterableCell">
+        <li class="itemBox__cell">
+          <div class="itemBox__cellInner">
+            <div class="itemBox__value JS_text">{{item}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- /.itemBox -->
+
+</div>
+<!-- /.multiSelector -->
