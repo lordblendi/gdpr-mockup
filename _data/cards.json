@@ -13,7 +13,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": ""
     },
     {
       "time": "1 Month ago",
@@ -28,7 +29,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": "card--alert"
+      "is-alert": "card--alert",
+      "loading": ""
     },
     {
       "time": "1 Month ago",
@@ -43,7 +45,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": "animate-loading"
     },
     {
       "time": "3 Months ago",
@@ -58,7 +61,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": ""
     },
     {
       "time": "1 Month ago",
@@ -73,7 +77,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": ""
     },
     {
       "time": "1 Month ago",
@@ -88,7 +93,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": ""
     },
     {
       "time": "3 Months ago",
@@ -103,7 +109,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": ""
     },
     {
       "time": "1 Month ago",
@@ -118,7 +125,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": ""
     },
     {
       "time": "1 Month ago",
@@ -133,7 +141,8 @@
       "total-attributes":"6",
       "risk-records":"1k",
       "total-records":"5k",
-      "is-alert": ""
+      "is-alert": "",
+      "loading": ""
     }
   ]
 }

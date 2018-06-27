@@ -1,7 +1,7 @@
 {% assign classes =  "relative inline-block pt-6 bg-white rounded-lg no-underline text-black cursor-pointer" %}
 
 {% if include.cItem %}
-  {% assign classes =  "card " | append: {{include.data.is-alert}} %}
+  {% assign classes =  "card " | append: {{include.data.is-alert}} | append: " " | append: {{include.data.loading}} %}
 {% endif %}
 
   <a class="{{classes}}">
