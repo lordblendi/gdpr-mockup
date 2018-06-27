@@ -7,6 +7,10 @@ $('.JS_c-item').on('click', function() {
 });
 
 function handleCardOnclick(card) {
+  if ($(card).find('.animate-loading').length > 0) {
+    return;
+  }
+
   // calculate how many items fit in a row
   const width = $(card).outerWidth(true);
   const windowWidth = $(window).width();
