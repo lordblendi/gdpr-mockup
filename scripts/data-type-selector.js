@@ -35,5 +35,5 @@ $('#multiSelector-data-types .JS_filterableCell').on('click', function(){
 function closeDataTypeSelectorUntouched() {
   $('body').removeClass('selector-data-types--visible');
   $('.multiSelector--visible').removeClass('multiSelector--visible animate-popup animate-fadein');
-  openOverlay();
+  openOverlay(false, false, false);
 }

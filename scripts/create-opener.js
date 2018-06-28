@@ -8,7 +8,7 @@ $('.JS_create-button').on('click', function() {
       // add necessary classes
       $('body').addClass('item-create--visible');
       $('main, .c-tool-bar, .kpi-bar, .header-bar').addClass('blurred');
-      openOverlay();
+      openOverlay(false, false, false);
   });
 });
 

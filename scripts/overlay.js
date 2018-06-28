@@ -16,11 +16,3 @@ function closeOverlayExtraActions() {
     closeCreateItem();
   }
 }
-
-// open overlay with or without opacity 100
-function openOverlay(withOpacity) {
-  $(".overlay-body").addClass('pointer-events-auto');
-  if (withOpacity) {
-    $(".overlay-body").addClass('opacity-100');
-  }
-}
