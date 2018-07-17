@@ -11,7 +11,7 @@ $('.JS_filterSelector').on('click', function() {
   $('.JS_showSelected').remove();
 
   const currentChosenText = $(this).find('.JS_text').html();
-  const possibleDataTypes = $('#multiSelector-filter .JS_text');
+  const possibleDataTypes = $('#modal-filter .JS_text');
   const selectedHTML=`{% include javascript/item-selected.html %}`;
 
   // add tick to the selected item
@@ -23,7 +23,7 @@ $('.JS_filterSelector').on('click', function() {
   });
 });
 
-$('#multiSelector-filter .JS_filterableCell').on('click', function(){
+$('#modal-filter .JS_filterableCell').on('click', function(){
   closeOverlay();
   closeFilterSelectorUntouched();
   const newText = $(this).find('.JS_text').html();
@@ -35,5 +35,5 @@ $('#multiSelector-filter .JS_filterableCell').on('click', function(){
 */
 function closeFilterSelectorUntouched() {
   $('body').removeClass('selector-filter--visible');
-  $('.multiSelector--visible').removeClass('multiSelector--visible animate-popup animate-fadein');
+  $('.modal--visible').removeClass('modal--visible animate-popup animate-fadein');
 }

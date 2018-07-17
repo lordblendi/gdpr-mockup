@@ -11,7 +11,7 @@ $('.JS_dataTypeSelector').on('click', function() {
   $('.JS_showSelected').remove();
 
   const currentChosenText = $(this).find('.JS_text').html();
-  const possibleDataTypes = $('#multiSelector-data-types .JS_text');
+  const possibleDataTypes = $('#modal-data-types .JS_text');
   const selectedHTML=`{% include javascript/item-selected.html %}`;
 
   // add tick to the selected item
@@ -23,7 +23,7 @@ $('.JS_dataTypeSelector').on('click', function() {
   });
 });
 
-$('#multiSelector-data-types .JS_filterableCell').on('click', function(){
+$('#modal-data-types .JS_filterableCell').on('click', function(){
   closeDataTypeSelectorUntouched();
   const newText = $(this).find('.JS_text').html();
   $('.JS_dataTypeSelector .JS_text').html(newText);
@@ -34,6 +34,6 @@ $('#multiSelector-data-types .JS_filterableCell').on('click', function(){
 */
 function closeDataTypeSelectorUntouched() {
   $('body').removeClass('selector-data-types--visible');
-  $('.multiSelector--visible').removeClass('multiSelector--visible animate-popup animate-fadein');
+  $('.modal--visible').removeClass('modal--visible animate-popup animate-fadein');
   openOverlay(false, false, false);
 }
