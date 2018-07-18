@@ -55,9 +55,6 @@ function handleCardOnclick(card) {
   slideDown($('.JS_item-details'), function(){
       // add necessary classes
       $('body').addClass('item-details--visible');
-      $(card).addClass('not-blurred');
-      // $(cardList).addClass('blurred');
-      $('main, .c-tool-bar, .kpi-bar, .header-bar').addClass('blurred');
       openOverlay(false, false, false);
 
       // init table expand/collapse actions
@@ -70,9 +67,8 @@ function handleCardOnclick(card) {
   });
 }
 
-// remove item details and the blurriness
+// remove item details
 function removeItemDetails() {
-  $('.blurred, .not-blurred').removeClass('blurred not-blurred');
   slideUp($('.JS_item-details'), function() {
     $('body').removeClass('item-details--visible');
     $('.JS_item-details').remove();

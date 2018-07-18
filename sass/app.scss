@@ -84,17 +84,3 @@ body {
   );
   animation: loading 3s linear infinite;
 }
-
-
-
-
-
-
-
-
-.blurred {
-  > *:not(.not-blurred) {
-    filter: blur(3px);
-    pointer-events: none;
-  }
-}
