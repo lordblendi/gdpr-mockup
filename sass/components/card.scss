@@ -17,6 +17,17 @@
     transform: translatey(2px);
     box-shadow: 0 1px 0 #6C6C6C;
 
+    .card__header {
+      opacity: 0;
+    }
+    .card__body {
+      &__meta {
+        opacity: 0;
+      }
+      &__details {
+        top: -150px;
+      }
+    }
     .card__footer {
       bottom: -150px;
       pointer-events: none;
@@ -37,6 +48,8 @@
     font-size: .875rem;
     text-transform: uppercase;
     color: #818181;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
   }
 
   &__body {
@@ -44,6 +57,16 @@
     flex-direction: column;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+
+    &__meta {
+      transition: opacity .2s ease-in-out;
+      opacity: 1;
+    }
+    &__details {
+      transition: top .3s ease-in-out;
+      position: relative;
+      top: 0;
+    }
   }
 
   &__footer {

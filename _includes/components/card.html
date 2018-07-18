@@ -4,23 +4,27 @@
   {% assign classes =  "card " | append: {{include.data.is-alert}} | append: " " | append: {{include.data.loading}} %}
 {% endif %}
 
-  <a class="{{classes}}">
+  <div class="{{classes}}">
     <header class="card__header">
       <span class="card__header__time"> {{include.data.time}}</span>
       <span class="ml-2">{{include.data.comments}}</span>
     </header>
 
     <div class="card__body">
-      <div class="mb-1 text-sm uppercase font-bold primary"><span class="font-normal">{{include.data.type-icon}}</span>{{include.data.type-name}}</div>
-      <div class="mb-1 text-2xl font-bold">{{include.data.name}}</div>
-      <div class="mb-2 text-grey"> {{include.data.user}}</div>
-      <div class="my-2">
-        <p>{{include.data.description}}</p>
+      <div class="card__body__meta">
+        <div class="mb-1 text-sm uppercase font-bold primary"><span class="font-normal">{{include.data.type-icon}}</span>{{include.data.type-name}}</div>
+        <div class="mb-1 text-2xl font-bold">{{include.data.name}}</div>
+        <div class="mb-2 text-grey"> {{include.data.user}}</div>
       </div>
-      <div class="my-2">
-        {% for tag in include.data.tags -%}
-          <span class="tag primary">{{tag}}</span>
-        {% endfor %}
+      <div class="card__body__details">
+        <div class="my-2">
+          <p>{{include.data.description}}</p>
+        </div>
+        <div class="my-2">
+          {% for tag in include.data.tags -%}
+            <span class="tag primary">{{tag}}</span>
+          {% endfor %}
+        </div>
       </div>
     </div>
 
@@ -44,4 +48,4 @@
         </div>
       </footer>
     {% endif %}
-  </a>
+  </div>
