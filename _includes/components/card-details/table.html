@@ -8,7 +8,16 @@
       </li>
       {% for item in site.data.table.header %}
       <li class="itemBox__cell">
-        <div class="itemBox__cellInner">{{item}}</div>
+        <div class="itemBox__cellInner">
+          <div class="field">
+            <div class="field__label">{{item}}</div>
+            <div class="field__data">
+              <div class="field__value">
+                <input class="field__input" type="text" value="">
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
       {% endfor %}
     </ul>

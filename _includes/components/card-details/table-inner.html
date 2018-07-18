@@ -1,9 +1,18 @@
-<div class="itemBox itemBox--sublist animate-fadein JS_itemBox--children JS_children-closed" style="display:none;">
+<div class="itemBox animate-fadein JS_itemBox--children JS_children-closed" style="display:none;">
   <div class="itemBox__row">
     <ul class="itemBox__rowInner itemBox__rowInner--thead">
       {% for item in site.data.table.example-header %}
       <li class="itemBox__cell">
-        <div class="itemBox__cellInner">{{item}}</div>
+        <div class="itemBox__cellInner">
+          <div class="field">
+            <div class="field__label">{{item}}</div>
+            <div class="field__data">
+              <div class="field__value">
+                <input class="field__input" type="text" value="">
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
       {% endfor %}
     </ul>

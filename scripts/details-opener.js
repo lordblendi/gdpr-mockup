@@ -45,6 +45,8 @@ function handleCardOnclick(card) {
   setupTabs(".tabs-nav");
   // add comment panel toggle
   setupCommentToggle();
+  // setupFields
+  setupFieldActions();
 
   // add tags
   jQuery.each(data['tags'], function(index, tag){
