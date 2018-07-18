@@ -99,3 +99,14 @@
     pointer-events: none;
   }
 }
+
+
+.animate-loading {
+  .card__header__time {
+    display: none;
+  }
+  .card__footer {
+    bottom: -150px;
+    pointer-events: none;
+  }
+}
