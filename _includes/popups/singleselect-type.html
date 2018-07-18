@@ -1,18 +1,18 @@
 <div class="modal" id="modal-data-types">
-  <div class="itemBox JS_optionsChildren">
+  <div class="toolbox-table JS_optionsChildren">
     {% for item in site.data.data-types.items %}
-    <div class="itemBox__row">
-      <ul class="itemBox__rowInner itemBox__rowInner--item JS_filterableCell">
-        <li class="itemBox__cell">
-          <div class="itemBox__cellInner">
-            <div class="itemBox__value JS_text">{{item}}</div>
+    <div class="toolbox-table__row">
+      <ul class="toolbox-table__rowInner toolbox-table__rowInner--item JS_filterableCell">
+        <li class="toolbox-table__cell">
+          <div class="toolbox-table__cellInner">
+            <div class="toolbox-table__value JS_text">{{item}}</div>
           </div>
         </li>
       </ul>
     </div>
     {% endfor %}
   </div>
-  <!-- /.itemBox -->
+  <!-- /.toolbox-table -->
 
 </div>
 <!-- /.modal -->
