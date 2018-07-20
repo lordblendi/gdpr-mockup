@@ -27,7 +27,7 @@ function drawChart() {
         node: {
           label: {
             //fontName: 'Times-Roman',
-            fontName: 'Source Sans Pro',
+            fontName: 'arial',
             fontSize: 14,
             fontWeight: 'normal',
             color: 'white',
