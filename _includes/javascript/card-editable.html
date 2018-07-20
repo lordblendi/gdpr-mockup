@@ -7,29 +7,29 @@
         <input class="w-full py-2 px-4 text-2xl font-bold rounded-full" value="${data['name']}" placeholder="Name">
       </div>
 
-      <div class="field field--not-empty">
-        <div class="field__label">Owned by</div>
-        <div class="field__data">
-          <div class="field__value">
+      <div class="toolbox-field toolbox-field--not-empty">
+        <div class="toolbox-field__label">Owned by</div>
+        <div class="toolbox-field__data">
+          <div class="toolbox-field__value">
             {% include components/toolbox-selector.html toolboxSelectorData=",,, ${data['user']}" expanded="true" singleselect="true" selectedIndexes="1" readonly="true"%}
           </div>
         </div>
       </div>
 
-      <div class="field field--not-empty">
-        <div class="field__label">Description</div>
-        <div class="field__data">
-          <div class="field__value">
+      <div class="toolbox-field toolbox-field--not-empty">
+        <div class="toolbox-field__label">Description</div>
+        <div class="toolbox-field__data">
+          <div class="toolbox-field__value">
             <div class="my-2 p-2 bg-white rounded-lg text-sm w-full whitespace-normal" contenteditable="true" placeholder="Description">
               ${data['description']}</div>
           </div>
         </div>
       </div>
 
-      <div class="field field--not-empty">
-        <div class="field__label">Tags</div>
-        <div class="field__data">
-          <div class="field__value">
+      <div class="toolbox-field toolbox-field--not-empty">
+        <div class="toolbox-field__label">Tags</div>
+        <div class="toolbox-field__data">
+          <div class="toolbox-field__value">
             <div class="my-2 p-2 bg-white rounded-lg text-sm w-full whitespace-normal JS_detailsTags" contenteditable="true" placeholder="Tags"></div>
           </div>
         </div>
