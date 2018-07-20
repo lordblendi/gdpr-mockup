@@ -6,13 +6,13 @@
 
   <div class="panel panel-table">
     <div class="p-6 pt-4 text-white">
-      <div class="tabs tabs--invert">
-        <div class="tabs-nav">
+      <div class="toolbox-tabs toolbox-tabs--invert">
+        <div class="toolbox-tabs-nav">
           <div class="flex flex-row items-center justify-end">
             <ul>
-              <span class="tabs-nav__linkBar"></span>
-              <li><a class="tabs-nav__link tabs-nav__link--active" tabindex="1">Table</a></li>
-              <li><a class="tabs-nav__link" tabindex="2" style="">Graph</a></li>
+              <span class="toolbox-tabs-nav__linkBar"></span>
+              <li><a class="toolbox-tabs-nav__link toolbox-tabs-nav__link--active" tabindex="1">Table</a></li>
+              <li><a class="toolbox-tabs-nav__link" tabindex="2" style="">Graph</a></li>
             </ul>
             <div class="flex-grow"></div>
             <div class="primary inline-action p-2 px-4"></div>
@@ -21,11 +21,11 @@
             <div class="primary inline-action p-2 px-4 JS_comments-toggle"><sup>2</sup></div>
           </div>
         </div>
-        <div class="tabs-panels JS_panels">
-          <div class="tabs-panels__panel" tabindex="1">
+        <div class="toolbox-tabs-panels JS_panels">
+          <div class="toolbox-tabs-panels__panel" tabindex="1">
             {% include components/card-details/table.html %}
           </div>
-          <div class="tabs-panels__panel" tabindex="2">
+          <div class="toolbox-tabs-panels__panel" tabindex="2">
             {% include components/card-details/graph.html %}
           </div>
         </div>

@@ -42,7 +42,7 @@ function handleCardOnclick(card) {
   // insert the item details, display none
   $(cItems[detailsPlace]).after(detailsHTML);
   // add tab functionality
-  setupTabs(".tabs-nav");
+  setupTabs(".toolbox-tabs-nav");
   // add comment panel toggle
   setupCommentToggle();
   // setupFields
