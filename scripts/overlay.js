@@ -1,5 +1,5 @@
 // onclick action on overlay to close item detail
-$('.overlay-body').on('click', function() {
+$('.toolbox-overlay').on('click', function() {
   closeOverlay();
   closeOverlayExtraActions();
 });

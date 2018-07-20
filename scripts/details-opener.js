@@ -80,6 +80,6 @@ function removeItemDetails() {
 // close details on resize
 $(window).on('resize', function() {
   if ($('body').hasClass('item-details--visible')) {
-    $('.overlay-body').click();
+    $('.toolbox-overlay').click();
   }
 });
