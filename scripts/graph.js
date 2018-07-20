@@ -28,10 +28,9 @@ function drawChart() {
           label: {
             //fontName: 'Times-Roman',
             fontName: 'arial',
-            fontSize: 14,
+            fontSize: 12,
             fontWeight: 'normal',
-            color: 'white',
-            bold: true
+            color: 'white'
           },
           interactivity: true,
           width: 5,            // Thickness of the node.
